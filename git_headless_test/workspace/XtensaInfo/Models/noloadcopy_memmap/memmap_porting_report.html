@@ -1,0 +1,602 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+   <style type="text/css">
+      table
+      {
+      	border-width:0px 1px 1px 1px;
+      	margin:0 0 20px 0;
+      	paddding:0;
+      	margin:0;
+      	cellpadding:1;
+       cellspacing:0;
+      }
+
+
+      tr
+      {
+      	border-width:0px 0px 1px 0px;
+      	border-color:#000000;
+      	border-style:solid;
+      	padding:10px;
+      	margin:0;
+      }
+
+      th.th_first
+      {
+       font-family: Arial, Helvetica, Verdana, sans-serif;
+      	text-align:center;
+      	border-width:1px 0px 1px 1px;
+      	border-color:#000000;
+      	border-style:solid;
+      	padding:5px;
+      	margin:0;
+      }
+
+      th.th_last
+      {
+       font-family: Arial, Helvetica, Verdana, sans-serif;
+      	text-align:center;
+      	border-width:1px 1px 1px 0px;
+      	border-color:#000000;
+      	border-style:solid;
+      	padding:5px;
+      	margin:0;
+      }
+
+      th.th_middle
+      {
+       font-family: Arial, Helvetica, Verdana, sans-serif;
+      	text-align:center;
+      	border-width:1px 1px 1px 1px;
+      	border-color:#000000;
+      	border-style:solid;
+      	padding:5px;
+      	margin:0;
+      }
+
+      td.td_middle
+      {
+       font-family: Arial, Helvetica, Verdana, sans-serif;
+      	text-align:center;
+      	border-width:0px 1px 1px 1px;
+      	border-color:#000000;
+      	border-style:solid;
+      	padding:5px;
+      	margin:0;
+      }
+
+      td.td_first
+      {
+       font-family: Arial, Helvetica, Verdana, sans-serif;
+      	text-align:left;
+      	border-width:0px 0px 1px 1px;
+      	border-color:#000000;
+      	border-style:solid;
+      	padding:5px;
+      	margin:0;
+      }
+
+      td.td_last
+      {
+       font-family: Arial, Helvetica, Verdana, sans-serif;
+      	text-align:left;
+      	border-width:0px 1px 1px 0px;
+      	border-color:#000000;
+      	border-style:solid;
+      	padding:5px;
+      	margin:0;
+      }
+
+      td.td_first_1
+      {
+       font-family: Arial, Helvetica, Verdana, sans-serif;
+		text-indent: 1cm;
+      	text-align:left;
+      	border-width:0px 0px 1px 1px;
+      	border-color:#000000;
+      	border-style:solid;
+      	padding:5px;
+      	margin:0;
+      }
+
+      td.td_last_1
+      {
+       font-family: Arial, Helvetica, Verdana, sans-serif;
+		text-indent: 1cm;
+      	text-align:left;
+      	border-width:0px 1px 1px 0px;
+      	border-color:#000000;
+      	border-style:solid;
+      	padding:5px;
+      	margin:0;
+      }
+
+      td.td_first_2
+      {
+       font-family: Arial, Helvetica, Verdana, sans-serif;
+		text-indent: 2cm;
+      	text-align:left;
+      	border-width:0px 0px 1px 1px;
+      	border-color:#000000;
+      	border-style:solid;
+      	padding:5px;
+      	margin:0;
+      }
+
+      td.td_last_2
+      {
+       font-family: Arial, Helvetica, Verdana, sans-serif;
+		text-indent: 2cm;
+      	text-align:left;
+      	border-width:0px 1px 1px 0px;
+      	border-color:#000000;
+      	border-style:solid;
+      	padding:5px;
+      	margin:0;
+      }
+
+		p, a, h1, h2, h3, h4, li, ul, ol, { font-family: Arial, Helvetica, sans-serif; }
+		ul { list-style-type:circle; }
+   </style></head>
+<body>
+<h2>Memory Map Porting Report</h2>
+
+   <table align="center" border="0" cellpadding="1" cellspacing="0" width="96%">
+	   <tr>
+	      <th class="th_first" bgcolor="#808080">Source Configuration</th>
+	      <th class="th_middle" width="30" bgcolor="#808080">Port</th>
+	      <th class="th_last" bgcolor="#808080">Dest Configuration</th>
+	   </tr>
+
+      <tr>
+         <td class="td_first"><font color="#000000">Primitives</font></td>
+         <td class="td_middle" width="30"><font color="#000000">=</font></td>
+         <td class="td_last"><font color="#000000">Primitives</font></td>
+      </tr>
+      <tr>
+         <td class="td_first"><font color="#000000">Parameters</font></td>
+         <td class="td_middle" width="30"><font color="#000000">=</font></td>
+         <td class="td_last"><font color="#000000">Parameters</font></td>
+      </tr>
+      <tr>
+         <td class="td_first"><font color="#000000">&nbsp;</font></td>
+         <td class="td_middle" width="30"><font color="#000000">^</font></td>
+         <td class="td_last"><font color="#000000">Memory dram1 0x3ffc0000/128K [dataRam]</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_1"><font color="#000000">&nbsp;</font></td>
+         <td class="td_middle" width="30"><font color="#000000">^</font></td>
+         <td class="td_last_1" ><font color="#000000">Segment dram1_0 0x3ffc0000/128K</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> &nbsp;</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">^</font></td>
+		  <td class="td_last_2" ><font color="#000000">.dram1.rodata</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> &nbsp;</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">^</font></td>
+		  <td class="td_last_2" ><font color="#000000">.dram1.literal</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> &nbsp;</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">^</font></td>
+		  <td class="td_last_2" ><font color="#000000">.dram1.data</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> &nbsp;</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">^</font></td>
+		  <td class="td_last_2" ><font color="#000000">.dram1.bss</font></td>
+      </tr>
+      <tr>
+         <td class="td_first"><font color="#000000">Memory dram0 0x3ffe0000/128K [dataRam]</font></td>
+         <td class="td_middle" width="30"><font color="#000000">=</font></td>
+         <td class="td_last"><font color="#000000">Memory dram0 0x3ffe0000/128K [dataRam]</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_1"><font color="#000000">Segment dram0_0 0x3ffe0000/128K</font></td>
+         <td class="td_middle" width="30"><font color="#000000">=</font></td>
+         <td class="td_last_1" ><font color="#000000">Segment dram0_0 0x3ffe0000/128K</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> .dram0.rodata</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">=</font></td>
+		  <td class="td_last_2" ><font color="#000000">.dram0.rodata</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> .dram0.literal</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">=</font></td>
+		  <td class="td_last_2" ><font color="#000000">.dram0.literal</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> .dram0.data</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">=</font></td>
+		  <td class="td_last_2" ><font color="#000000">.dram0.data</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> .dram0.bss</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">=</font></td>
+		  <td class="td_last_2" ><font color="#000000">.dram0.bss</font></td>
+      </tr>
+      <tr>
+         <td class="td_first"><font color="#000000">Memory iram0 0x40000000/128K [instRam]</font></td>
+         <td class="td_middle" width="30"><font color="#000000">=</font></td>
+         <td class="td_last"><font color="#000000">Memory iram0 0x40000000/128K [instRam]</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_1"><font color="#000000">Segment iram0_0 0x40000000/0x10</font></td>
+         <td class="td_middle" width="30"><font color="#000000">=</font></td>
+         <td class="td_last_1" ><font color="#000000">Segment iram0_0 0x40000000/0x178</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> .DebugExceptionVector.literal</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">X</font></td>
+		  <td class="td_last_2" ><font color="#000000">&nbsp;</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> &nbsp;</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">^</font></td>
+		  <td class="td_last_2" ><font color="#000000">.WindowVectors.text</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_1"><font color="#000000">Segment iram0_1 0x40000010/0xc</font></td>
+         <td class="td_middle" width="30"><font color="#000000">=</font></td>
+         <td class="td_last_1" ><font color="#000000">Segment iram0_1 0x40000178/0x8</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> .DebugExceptionVector.text</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">X</font></td>
+		  <td class="td_last_2" ><font color="#000000">&nbsp;</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> &nbsp;</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">^</font></td>
+		  <td class="td_last_2" ><font color="#000000">.Level2InterruptVector.literal</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_1"><font color="#000000">Segment iram0_2 0x4000001c/0x4</font></td>
+         <td class="td_middle" width="30"><font color="#000000">=</font></td>
+         <td class="td_last_1" ><font color="#000000">Segment iram0_2 0x40000180/0x38</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> .NMIExceptionVector.literal</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">X</font></td>
+		  <td class="td_last_2" ><font color="#000000">&nbsp;</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> &nbsp;</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">^</font></td>
+		  <td class="td_last_2" ><font color="#000000">.Level2InterruptVector.text</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_1"><font color="#000000">Segment iram0_3 0x40000020/0xc</font></td>
+         <td class="td_middle" width="30"><font color="#000000">=</font></td>
+         <td class="td_last_1" ><font color="#000000">Segment iram0_3 0x400001b8/0x8</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> .NMIExceptionVector.text</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">X</font></td>
+		  <td class="td_last_2" ><font color="#000000">&nbsp;</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> &nbsp;</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">^</font></td>
+		  <td class="td_last_2" ><font color="#000000">.Level3InterruptVector.literal</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_1"><font color="#000000">Segment iram0_4 0x4000002c/0x4</font></td>
+         <td class="td_middle" width="30"><font color="#000000">=</font></td>
+         <td class="td_last_1" ><font color="#000000">Segment iram0_4 0x400001c0/0x38</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> .KernelExceptionVector.literal</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">X</font></td>
+		  <td class="td_last_2" ><font color="#000000">&nbsp;</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> &nbsp;</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">^</font></td>
+		  <td class="td_last_2" ><font color="#000000">.Level3InterruptVector.text</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_1"><font color="#000000">Segment iram0_5 0x40000030/0x1c</font></td>
+         <td class="td_middle" width="30"><font color="#000000">=</font></td>
+         <td class="td_last_1" ><font color="#000000">Segment iram0_5 0x400001f8/0x8</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> .KernelExceptionVector.text</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">X</font></td>
+		  <td class="td_last_2" ><font color="#000000">&nbsp;</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> &nbsp;</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">^</font></td>
+		  <td class="td_last_2" ><font color="#000000">.Level4InterruptVector.literal</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_1"><font color="#000000">Segment iram0_6 0x4000004c/0x4</font></td>
+         <td class="td_middle" width="30"><font color="#000000">=</font></td>
+         <td class="td_last_1" ><font color="#000000">Segment iram0_6 0x40000200/0x38</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> .UserExceptionVector.literal</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">X</font></td>
+		  <td class="td_last_2" ><font color="#000000">&nbsp;</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> &nbsp;</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">^</font></td>
+		  <td class="td_last_2" ><font color="#000000">.Level4InterruptVector.text</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_1"><font color="#000000">Segment iram0_7 0x40000050/0x1c</font></td>
+         <td class="td_middle" width="30"><font color="#000000">=</font></td>
+         <td class="td_last_1" ><font color="#000000">Segment iram0_7 0x40000238/0x8</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> .UserExceptionVector.text</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">X</font></td>
+		  <td class="td_last_2" ><font color="#000000">&nbsp;</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> &nbsp;</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">^</font></td>
+		  <td class="td_last_2" ><font color="#000000">.Level5InterruptVector.literal</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_1"><font color="#000000">Segment iram0_8 0x4000006c/0x4</font></td>
+         <td class="td_middle" width="30"><font color="#000000">=</font></td>
+         <td class="td_last_1" ><font color="#000000">Segment iram0_8 0x40000240/0x38</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> .DoubleExceptionVector.literal</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">X</font></td>
+		  <td class="td_last_2" ><font color="#000000">&nbsp;</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> &nbsp;</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">^</font></td>
+		  <td class="td_last_2" ><font color="#000000">.Level5InterruptVector.text</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_1"><font color="#000000">Segment iram0_9 0x40000070/0x10</font></td>
+         <td class="td_middle" width="30"><font color="#000000">=</font></td>
+         <td class="td_last_1" ><font color="#000000">Segment iram0_9 0x40000278/0x8</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> .DoubleExceptionVector.text</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">X</font></td>
+		  <td class="td_last_2" ><font color="#000000">&nbsp;</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> &nbsp;</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">^</font></td>
+		  <td class="td_last_2" ><font color="#000000">.DebugExceptionVector.literal</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_1"><font color="#000000">Segment iram0_10 0x40000080/0x1ff80</font></td>
+         <td class="td_middle" width="30"><font color="#000000">=</font></td>
+         <td class="td_last_1" ><font color="#000000">Segment iram0_10 0x40000280/0x38</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> .iram0.literal</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">X</font></td>
+		  <td class="td_last_2" ><font color="#000000">&nbsp;</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> .iram0.text</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">X</font></td>
+		  <td class="td_last_2" ><font color="#000000">&nbsp;</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> &nbsp;</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">^</font></td>
+		  <td class="td_last_2" ><font color="#000000">.DebugExceptionVector.text</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_1"><font color="#000000">&nbsp;</font></td>
+         <td class="td_middle" width="30"><font color="#000000">^</font></td>
+         <td class="td_last_1" ><font color="#000000">Segment iram0_11 0x400002b8/0x8</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> &nbsp;</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">^</font></td>
+		  <td class="td_last_2" ><font color="#000000">.NMIExceptionVector.literal</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_1"><font color="#000000">&nbsp;</font></td>
+         <td class="td_middle" width="30"><font color="#000000">^</font></td>
+         <td class="td_last_1" ><font color="#000000">Segment iram0_12 0x400002c0/0x38</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> &nbsp;</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">^</font></td>
+		  <td class="td_last_2" ><font color="#000000">.NMIExceptionVector.text</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_1"><font color="#000000">&nbsp;</font></td>
+         <td class="td_middle" width="30"><font color="#000000">^</font></td>
+         <td class="td_last_1" ><font color="#000000">Segment iram0_13 0x400002f8/0x8</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> &nbsp;</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">^</font></td>
+		  <td class="td_last_2" ><font color="#000000">.KernelExceptionVector.literal</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_1"><font color="#000000">&nbsp;</font></td>
+         <td class="td_middle" width="30"><font color="#000000">^</font></td>
+         <td class="td_last_1" ><font color="#000000">Segment iram0_14 0x40000300/0x38</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> &nbsp;</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">^</font></td>
+		  <td class="td_last_2" ><font color="#000000">.KernelExceptionVector.text</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_1"><font color="#000000">&nbsp;</font></td>
+         <td class="td_middle" width="30"><font color="#000000">^</font></td>
+         <td class="td_last_1" ><font color="#000000">Segment iram0_15 0x40000338/0x8</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> &nbsp;</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">^</font></td>
+		  <td class="td_last_2" ><font color="#000000">.UserExceptionVector.literal</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_1"><font color="#000000">&nbsp;</font></td>
+         <td class="td_middle" width="30"><font color="#000000">^</font></td>
+         <td class="td_last_1" ><font color="#000000">Segment iram0_16 0x40000340/0x38</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> &nbsp;</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">^</font></td>
+		  <td class="td_last_2" ><font color="#000000">.UserExceptionVector.text</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_1"><font color="#000000">&nbsp;</font></td>
+         <td class="td_middle" width="30"><font color="#000000">^</font></td>
+         <td class="td_last_1" ><font color="#000000">Segment iram0_17 0x40000378/0x48</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> &nbsp;</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">^</font></td>
+		  <td class="td_last_2" ><font color="#000000">.DoubleExceptionVector.literal</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_1"><font color="#000000">&nbsp;</font></td>
+         <td class="td_middle" width="30"><font color="#000000">^</font></td>
+         <td class="td_last_1" ><font color="#000000">Segment iram0_18 0x400003c0/0x40</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> &nbsp;</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">^</font></td>
+		  <td class="td_last_2" ><font color="#000000">.DoubleExceptionVector.text</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_1"><font color="#000000">&nbsp;</font></td>
+         <td class="td_middle" width="30"><font color="#000000">^</font></td>
+         <td class="td_last_1" ><font color="#000000">Segment iram0_19 0x40000400/127K</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> &nbsp;</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">^</font></td>
+		  <td class="td_last_2" ><font color="#000000">.iram0.literal</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> &nbsp;</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">^</font></td>
+		  <td class="td_last_2" ><font color="#000000">.iram0.text</font></td>
+      </tr>
+      <tr>
+         <td class="td_first"><font color="#000000">Memory srom 0x50000000/16M [sysrom]</font></td>
+         <td class="td_middle" width="30"><font color="#000000">=</font></td>
+         <td class="td_last"><font color="#000000">Memory srom 0x50000000/16M [sysrom]</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_1"><font color="#000000">Segment srom0 0x50000000/0x300</font></td>
+         <td class="td_middle" width="30"><font color="#000000">=</font></td>
+         <td class="td_last_1" ><font color="#000000">Segment srom0 0x50000000/0x300</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> .ResetVector.text</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">=</font></td>
+		  <td class="td_last_2" ><font color="#000000">.ResetVector.text</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_1"><font color="#000000">Segment srom1 0x50000300/0xfffd00</font></td>
+         <td class="td_middle" width="30"><font color="#000000">=</font></td>
+         <td class="td_last_1" ><font color="#000000">Segment srom1 0x50000300/0xfffd00</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> .srom.rodata</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">=</font></td>
+		  <td class="td_last_2" ><font color="#000000">.srom.rodata</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> .srom.literal</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">=</font></td>
+		  <td class="td_last_2" ><font color="#000000">.srom.literal</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> .srom.text</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">=</font></td>
+		  <td class="td_last_2" ><font color="#000000">.srom.text</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> .rom.store</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">=</font></td>
+		  <td class="td_last_2" ><font color="#000000">.rom.store</font></td>
+      </tr>
+      <tr>
+         <td class="td_first"><font color="#000000">Memory sram 0x60000000/64M [sysram]</font></td>
+         <td class="td_middle" width="30"><font color="#000000">=</font></td>
+         <td class="td_last"><font color="#000000">Memory sram 0x60000000/64M [sysram]</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_1"><font color="#000000">Segment sram0 0x60000000/64M [Stack] [Heap]</font></td>
+         <td class="td_middle" width="30"><font color="#000000">=</font></td>
+         <td class="td_last_1" ><font color="#000000">Segment sram0 0x60000000/64M [Stack] [Heap]</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> .sram.rodata</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">=</font></td>
+		  <td class="td_last_2" ><font color="#000000">.sram.rodata</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> .rodata</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">=</font></td>
+		  <td class="td_last_2" ><font color="#000000">.rodata</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> .sram.literal</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">=</font></td>
+		  <td class="td_last_2" ><font color="#000000">.sram.literal</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> .literal</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">=</font></td>
+		  <td class="td_last_2" ><font color="#000000">.literal</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> .sram.text</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">=</font></td>
+		  <td class="td_last_2" ><font color="#000000">.sram.text</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> .text</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">=</font></td>
+		  <td class="td_last_2" ><font color="#000000">.text</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> .sram.data</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">=</font></td>
+		  <td class="td_last_2" ><font color="#000000">.sram.data</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> .data</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">=</font></td>
+		  <td class="td_last_2" ><font color="#000000">.data</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> .sram.bss</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">=</font></td>
+		  <td class="td_last_2" ><font color="#000000">.sram.bss</font></td>
+      </tr>
+      <tr>
+         <td class="td_first_2"><font color="#000000"> .bss</font></td>
+         <td class="td_middle" width="30" ><font color="#000000">=</font></td>
+		  <td class="td_last_2" ><font color="#000000">.bss</font></td>
+      </tr>
+</table>
+<p>Report generated on 28 ??? 2015 09:10:26 AM</p>
+<p>From:<br>
+Configuration: noload<br/>
+Installed Build: D_106micro (RF-2015.2-alpha2)</p>
+<p>To:<br>
+Configuration: noloadcopy<br/>
+Installed Build: D_108mini (RF-2015.2-alpha2)</p>
+<p>0 errors, 0 warnings, 0 changes.</p>

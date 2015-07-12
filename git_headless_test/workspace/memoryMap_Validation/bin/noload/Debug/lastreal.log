@@ -1,0 +1,22 @@
+**** Full Build [?, 28 ??? 2015 09:10:07] ****
+ Project: memoryMap_Validation
+ Configuration: noload
+ Build Target: Debug
+********************************
+Cleaning the build output folder "C:/usr/xtensa/Xplorer-7.0.0-alpha3-workspaces/workspace/memoryMap_Validation/bin/noload/Debug"...
+C:\usr\xtensa\XtDevTools\install\tools\RF-2015.2-alpha2-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -DPROC_noload -DCONFIG_noload --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2015.2-alpha2-win32/D_106micro/config --xtensa-core=D_106micro --xtensa-params= "C:/usr/xtensa/Xplorer-7.0.0-alpha3-workspaces/workspace/memoryMap_Validation/main.c" -o "C:/usr/xtensa/Xplorer-7.0.0-alpha3-workspaces/workspace/memoryMap_Validation/bin/noload/Debug/main.o"
+Time taken: 956 ms
+C:\usr\xtensa\XtDevTools\install\tools\RF-2015.2-alpha2-win32\XtensaTools\bin\xt-xc++ -Wl,@C:/usr/xtensa/Xplorer-7.0.0-alpha3-workspaces/workspace/memoryMap_Validation/bin/noload/Debug/objfiles.list -o C:/usr/xtensa/Xplorer-7.0.0-alpha3-workspaces/workspace/memoryMap_Validation/bin/noload/Debug/memoryMap_Validation -mlsp=C:/usr/xtensa/Xplorer-7.0.0-alpha3-workspaces/workspace/XtensaInfo/Models/noload_memmap/sim --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2015.2-alpha2-win32/D_106micro/config --xtensa-core=D_106micro --xtensa-params=
+Time taken: 288 ms
+******* Code size summary *****
+C:\usr\xtensa\XtDevTools\install\tools\RF-2015.2-alpha2-win32\XtensaTools\bin\xt-size -C C:/usr/xtensa/Xplorer-7.0.0-alpha3-workspaces/workspace/memoryMap_Validation/bin/noload/Debug/memoryMap_Validation
+TYPE   	   text	 rodata	   data	    bss	    dec    hex	filename
+code   	  33797	      0	      0	      0	  33797	   8405	C:/usr/xtensa/Xplorer-7.0.0-alpha3-workspaces/workspace/memoryMap_Validation/bin/noload/Debug/memoryMap_Validation
+literal	    528	      0	      0	      0	    528	    210	C:/usr/xtensa/Xplorer-7.0.0-alpha3-workspaces/workspace/memoryMap_Validation/bin/noload/Debug/memoryMap_Validation
+other  	    698	   1380	   2784	    112	   4974	   136e	C:/usr/xtensa/Xplorer-7.0.0-alpha3-workspaces/workspace/memoryMap_Validation/bin/noload/Debug/memoryMap_Validation
+Total  	  35023	   1380	   2784	    112	  39299	   9983	C:/usr/xtensa/Xplorer-7.0.0-alpha3-workspaces/workspace/memoryMap_Validation/bin/noload/Debug/memoryMap_Validation
+Time taken: 139 ms
+******* ************** *****
+Build successful !!
+Total time taken: 2.386 secs
+**** Build Finished [?, 28 ??? 2015 09:10:09] ****

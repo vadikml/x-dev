@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<batch_build_settings>
+<newEntry cleanBeforeBuild="false" name="Build_set0" stopOnError="false" type="project">
+<XtensaBuildEntry configName="D_106micro" isBuildEnabled="true" projectName="HelloWorld" targetName="Debug"/>
+</newEntry>
+</batch_build_settings>

@@ -1,0 +1,15 @@
+
+<PROJECT>:=memoryMap_Validation
+<CONFIG>:=noload
+<TARGET>:=Debug
+<FEEDBACK>:=FBmode: Off
+
+<TIE_COMPILE>:=
+<PRE_FINAL>:=
+<OBJS>:=[C:/usr/xtensa/Xplorer-7.0.0-alpha3-workspaces/workspace/memoryMap_Validation/bin/noload/Debug/main.o]
+<MINSIZE_LINK>:=
+<FINAL>:=-Wl,@C:/usr/xtensa/Xplorer-7.0.0-alpha3-workspaces/workspace/memoryMap_Validation/bin/noload/Debug/objfiles.list -o C:/usr/xtensa/Xplorer-7.0.0-alpha3-workspaces/workspace/memoryMap_Validation/bin/noload/Debug/memoryMap_Validation -mlsp=C:/usr/xtensa/Xplorer-7.0.0-alpha3-workspaces/workspace/XtensaInfo/Models/noload_memmap/sim --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2015.2-alpha2-win32/D_106micro/config --xtensa-core=D_106micro --xtensa-params=
+
+<COMPILE_START>
+main.c:=-c -g -O0 -fmessage-length=0 -DPROC_noload -DCONFIG_noload --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2015.2-alpha2-win32/D_106micro/config --xtensa-core=D_106micro --xtensa-params= "C:/usr/xtensa/Xplorer-7.0.0-alpha3-workspaces/workspace/memoryMap_Validation/main.c" -o "C:/usr/xtensa/Xplorer-7.0.0-alpha3-workspaces/workspace/memoryMap_Validation/bin/noload/Debug/main.o"
+<COMPILE_END>

@@ -1,0 +1,20 @@
+!SESSION 2015-07-12 15:02:38.766 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.7.0_21
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  256m -application com.tensilica.xide.cdt.XplorerHeadlessBuild --headless test.xml -- --cleanbuild
+Command-line arguments:  -os win32 -ws win32 -arch x86 256m -application com.tensilica.xide.cdt.XplorerHeadlessBuild --headless test.xml -- -data c:\usr\xtensa\Xplorer-7.0.0-alpha3-workspaces\workspace --cleanbuild
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-07-12 15:02:39.696
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2015-07-12 15:03:06.933 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.7.0_21
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  256m -application com.tensilica.xide.cdt.XplorerHeadlessBuild --headless test.xml -- --cleanbuild
+Command-line arguments:  -os win32 -ws win32 -arch x86 256m -application com.tensilica.xide.cdt.XplorerHeadlessBuild --headless test.xml -- -data c:\usr\xtensa\Xplorer-7.0.0-alpha3-workspaces\workspace --cleanbuild
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-07-12 15:03:07.890
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.

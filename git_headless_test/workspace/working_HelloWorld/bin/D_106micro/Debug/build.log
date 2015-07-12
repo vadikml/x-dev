@@ -1,0 +1,24 @@
+**** Full Build [?, 28 ??? 2015 09:38:02] ****
+ Project: HelloWorld
+ Configuration: D_106micro
+ Build Target: Debug
+********************************
+Cleaning the build output folder "C:/usr/xtensa/Xplorer-7.0.0-alpha3-workspaces/workspace/HelloWorld/bin/D_106micro/Debug"...
+C:\usr\xtensa\XtDevTools\install\tools\RF-2015.2-alpha2-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -DPROC_D_106micro -DCONFIG_D_106micro --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2015.2-alpha2-win32/D_106micro/config --xtensa-core=D_106micro --xtensa-params= "C:/usr/xtensa/Xplorer-7.0.0-alpha3-workspaces/workspace/HelloWorld/main.c" -o "C:/usr/xtensa/Xplorer-7.0.0-alpha3-workspaces/workspace/HelloWorld/bin/D_106micro/Debug/main.o"
+Time taken: 260 ms
+C:\usr\xtensa\XtDevTools\install\tools\RF-2015.2-alpha2-win32\XtensaTools\bin\xt-xc++ -Wl,@C:/usr/xtensa/Xplorer-7.0.0-alpha3-workspaces/workspace/HelloWorld/bin/D_106micro/Debug/objfiles.list -o C:/usr/xtensa/Xplorer-7.0.0-alpha3-workspaces/workspace/HelloWorld/bin/D_106micro/Debug/HelloWorld.minsize -mlsp=sim -Wl,-r -nostdlib --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2015.2-alpha2-win32/D_106micro/config --xtensa-core=D_106micro --xtensa-params=
+Time taken: 115 ms
+C:\usr\xtensa\XtDevTools\install\tools\RF-2015.2-alpha2-win32\XtensaTools\bin\xt-xc++ -Wl,@C:/usr/xtensa/Xplorer-7.0.0-alpha3-workspaces/workspace/HelloWorld/bin/D_106micro/Debug/objfiles.list -o C:/usr/xtensa/Xplorer-7.0.0-alpha3-workspaces/workspace/HelloWorld/bin/D_106micro/Debug/HelloWorld -mlsp=sim --xtensa-system=C:/usr/xtensa/XtDevTools/install/builds/RF-2015.2-alpha2-win32/D_106micro/config --xtensa-core=D_106micro --xtensa-params=
+Time taken: 277 ms
+******* Code size summary *****
+C:\usr\xtensa\XtDevTools\install\tools\RF-2015.2-alpha2-win32\XtensaTools\bin\xt-size -C C:/usr/xtensa/Xplorer-7.0.0-alpha3-workspaces/workspace/HelloWorld/bin/D_106micro/Debug/HelloWorld
+TYPE   	   text	 rodata	   data	    bss	    dec    hex	filename
+code   	  33797	      0	      0	      0	  33797	   8405	C:/usr/xtensa/Xplorer-7.0.0-alpha3-workspaces/workspace/HelloWorld/bin/D_106micro/Debug/HelloWorld
+literal	    528	      0	      0	      0	    528	    210	C:/usr/xtensa/Xplorer-7.0.0-alpha3-workspaces/workspace/HelloWorld/bin/D_106micro/Debug/HelloWorld
+other  	    698	   1380	   2784	    112	   4974	   136e	C:/usr/xtensa/Xplorer-7.0.0-alpha3-workspaces/workspace/HelloWorld/bin/D_106micro/Debug/HelloWorld
+Total  	  35023	   1380	   2784	    112	  39299	   9983	C:/usr/xtensa/Xplorer-7.0.0-alpha3-workspaces/workspace/HelloWorld/bin/D_106micro/Debug/HelloWorld
+Time taken: 105 ms
+******* ************** *****
+Build successful !!
+Total time taken: 1.465 secs
+**** Build Finished [?, 28 ??? 2015 09:38:03] ****

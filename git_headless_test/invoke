@@ -1,0 +1,1 @@
+xplorer --headless test.xml -- -data c:\usr\xtensa\Xplorer-7.0.0-alpha3-workspaces\headless_wsp_no_cproject --cleanbuild

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<XtensaToolsRegistry>
+<entry path="C:/usr/xtensa/XtDevTools/install/tools/RD-2012.4-win32/XtensaTools" version="RD-2012.4"/>
+<entry path="C:/usr/xtensa/XtDevTools/install/tools/RD-2012.5-win32/XtensaTools" version="RD-2012.5"/>
+<entry path="C:/usr/xtensa/XtDevTools/install/tools/RE-2014.5-win32/XtensaTools" version="RE-2014.5"/>
+<entry path="C:/usr/xtensa/XtDevTools/install/tools/RE-2015.6-win32/XtensaTools" version="RE-2015.6"/>
+<entry path="C:/usr/xtensa/XtDevTools/install/tools/RF-2014.0-win32/XtensaTools" version="RF-2014.0"/>
+<entry path="C:/usr/xtensa/XtDevTools/install/tools/RF-2014.1-win32/XtensaTools" version="RF-2014.1"/>
+<entry path="C:/usr/xtensa/XtDevTools/install/tools/RF-2015.2-win32/XtensaTools" version="RF-2015.2"/>
+<entry path="C:/usr/xtensa/XtDevTools/install/tools/RF-2015.2-2015-05-12-eng1-win32/XtensaTools" version="RF-2015.2-2015-05-12-eng1"/>
+<entry path="C:/usr/xtensa/XtDevTools/install/tools/RF-2015.2-alpha1-win32/XtensaTools" version="RF-2015.2-alpha1"/>
+<entry path="C:/usr/xtensa/XtDevTools/install/tools/RF-2015.2-alpha2-win32/XtensaTools" version="RF-2015.2-alpha2"/>
+<entry path="C:/usr/xtensa/XtDevTools/install/tools/RG-2015.0-2015-05-19-eng3-win32/XtensaTools" version="RG-2015.0-2015-05-19-eng3"/>
+<entry path="C:/usr/xtensa/XtDevTools/install/tools/RG-2015.0-2015-06-16-eng2-win32/XtensaTools" version="RG-2015.0-2015-06-16-eng2"/>
+<entry path="C:/usr/xtensa/XtDevTools/install/tools/RG-2015.0-alpha3-win32/XtensaTools" version="RG-2015.0-alpha3"/>
+</XtensaToolsRegistry>
